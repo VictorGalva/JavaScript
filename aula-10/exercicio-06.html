@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Começando com as Interações</title>
+    <style>
+        div#area{
+            background-color: mediumslateblue;
+            color: beige;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" >
+        Interaja Comigo...
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerHTML = '<strong>Clicou<strong>'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerHTML = '<strong>Entrou!<strong>'
+            a.style.border = 'solid black 2px'
+            a.style.borderRadius = '10px'
+            }
+            
+        function sair() {
+            a.innerHTML = '<strong>Saiu!<strong>'
+            a.style.border = 'none'
+            a.style.borderRadius = 'unset'
+        }
+        </script>
+</body>
+</html>
